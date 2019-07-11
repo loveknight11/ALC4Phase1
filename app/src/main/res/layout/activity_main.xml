@@ -23,7 +23,9 @@
         app:fontFamily="@font/metamorphous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/btn_about"

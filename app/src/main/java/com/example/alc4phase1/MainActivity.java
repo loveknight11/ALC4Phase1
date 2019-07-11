@@ -21,5 +21,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,AboutActivity.class));
             }
         });
+
+        Button buttonProfile = findViewById(R.id.btn_profile);
+        buttonProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,ProfileActivity.class));
+            }
+        });
     }
 }
