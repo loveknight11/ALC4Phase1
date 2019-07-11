@@ -13,9 +13,8 @@
         android:background="@color/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ToolbarTheme"
-
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-
+        app:titleTextColor="#FFF"
         tools:ignore="MissingConstraints" />
 
     <TextView

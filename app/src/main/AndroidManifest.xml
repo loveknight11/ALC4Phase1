@@ -14,8 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ProfileActivity"></activity>
-        <activity android:name=".AboutActivity" />
+        <activity android:name=".ProfileActivity"
+            android:label="My Profile"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.alc4phase1.MainActivity" />
+        </activity>
+        <activity android:name=".AboutActivity"
+            android:label="About Alc"
+            android:parentActivityName="com.example.alc4phase1.MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.alc4phase1.MainActivity" />
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

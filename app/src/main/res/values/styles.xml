@@ -8,8 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/metamorphous</item>
-
+        <item name="android:homeAsUpIndicator">@drawable/back_button_image</item>
     </style>
 </resources>
