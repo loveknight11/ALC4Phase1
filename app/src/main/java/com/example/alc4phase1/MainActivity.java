@@ -3,6 +3,7 @@ package com.example.alc4phase1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,5 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,ProfileActivity.class));
             }
         });
+
+        Typeface font = Typeface.createFromAsset(getAssets(),  "metamorphous.ttf");
+        buttonAbout.setTypeface(font);
+        buttonProfile.setTypeface(font);
     }
 }
