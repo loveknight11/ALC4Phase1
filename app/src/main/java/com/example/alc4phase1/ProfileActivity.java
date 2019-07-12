@@ -4,6 +4,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -15,7 +17,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         setSupportActionBar((Toolbar) findViewById(R.id.my_toolbar));
 
-        // my_child_toolbar is defined in the layout file
+        // my_toolbar is defined in the layout file
         Toolbar myChildToolbar =
                 (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myChildToolbar);
@@ -25,5 +27,10 @@ public class ProfileActivity extends AppCompatActivity {
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+
+        // set up button color to white
+        final Drawable upArrow = getResources().getDrawable(R.drawable.back_button_image);
+        upArrow.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);
     }
 }

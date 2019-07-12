@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProfileActivity"
-    android:paddingBottom="16dp">
+    android:paddingBottom="16dp"
+    tools:context=".ProfileActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -27,30 +27,31 @@
         android:layout_height="wrap_content"
         android:layout_weight="40"
         android:orientation="vertical">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="76dp"
-            android:src="@drawable/my_image"
-            android:layout_weight="1"
             android:layout_gravity="center"
-            android:paddingTop="32dp"
+            android:layout_weight="1"
             android:paddingLeft="32dp"
-            android:paddingRight="32dp"/>
+            android:paddingTop="32dp"
+            android:paddingRight="32dp"
+            android:src="@drawable/my_image" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Alhussiny Rezq"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:fontFamily="@font/metamorphous"
-            android:textAlignment="center"
+            android:paddingTop="8dp"
             android:paddingBottom="8dp"
-            android:paddingTop="8dp"/>
+            android:text="Alhussiny Rezq"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#000"/>
+            android:background="#000" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -58,43 +59,44 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="60">
+        android:layout_weight="60"
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/metamorphous"
+            android:paddingLeft="8dp"
+            android:paddingTop="16dp"
             android:text="Track :     Android"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:fontFamily="@font/metamorphous"
-            android:paddingLeft="8dp"
-            android:paddingTop="16dp"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/metamorphous"
+            android:paddingLeft="8dp"
+            android:paddingTop="16dp"
             android:text="Country :     Egypt"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:fontFamily="@font/metamorphous"
-            android:paddingLeft="8dp"
-            android:paddingTop="16dp"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/metamorphous"
+            android:paddingLeft="8dp"
+            android:paddingTop="16dp"
             android:text="Email :     eng.elhoseny.osama@gmail.com"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:fontFamily="@font/metamorphous"
-            android:paddingLeft="8dp"
-            android:paddingTop="16dp"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phone Number :     +201125972777"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:fontFamily="@font/metamorphous"
             android:paddingLeft="8dp"
-            android:paddingTop="16dp" />
+            android:paddingTop="16dp"
+            android:text="Phone Number :     +201125972777"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

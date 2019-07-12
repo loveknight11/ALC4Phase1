@@ -4,16 +4,14 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
-
-import java.net.URI;
-import java.net.URL;
 
 public class AboutActivity extends AppCompatActivity {
 
@@ -24,9 +22,8 @@ public class AboutActivity extends AppCompatActivity {
 
         setSupportActionBar((Toolbar) findViewById(R.id.my_toolbar));
 
-        // my_child_toolbar is defined in the layout file
-        Toolbar myChildToolbar =
-                (Toolbar) findViewById(R.id.my_toolbar);
+        // my_toolbar is defined in the layout file
+        Toolbar myChildToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myChildToolbar);
 
         // Get a support ActionBar corresponding to this toolbar
@@ -35,16 +32,17 @@ public class AboutActivity extends AppCompatActivity {
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
 
+        // set up button color to white
+        final Drawable upArrow = getResources().getDrawable(R.drawable.back_button_image);
+        upArrow.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);
+
         WebView webView = findViewById(R.id.webview);
-//        URI uri = URI.create("https://andela.com/alc");
         webView.getSettings().setJavaScriptEnabled(true);
-//        webView.getSettings().setDomStorageEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         webView.setWebViewClient(new SSLTolerentWebViewClient());
         webView.loadUrl("https://andela.com/alc");
-//        webView.loadUrl("https://www.google.com");
-//        webView.loadUrl(uri.toString());
     }
 
     class SSLTolerentWebViewClient extends WebViewClient {
